@@ -118,7 +118,7 @@ ol, ul {
 
 @media (max-width: 900px) {
   .ul_links {
-    top: 190px;
+    /* top: 190px; */
     background-color: #0147a9;
   }
 }
