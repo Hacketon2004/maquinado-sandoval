@@ -304,11 +304,10 @@ hr {
   animation: fadeIn 1s ease-out;
 }
 
-
-  
   .img-container {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
   }
   
@@ -380,6 +379,14 @@ hr {
 
   html{
       scroll-behavior: smooth;
+  }
+
+  @media (max-width:900px){
+
+  .img-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   }
 
   /* ------------------------------------------------------------------------------------------------------- */
