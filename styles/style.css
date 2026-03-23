@@ -303,9 +303,9 @@ hr {
 .img-product {
   animation: fadeIn 1s ease-out;
 }
-
+  
   .img-container {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
@@ -384,7 +384,12 @@ hr {
   @media (max-width:900px){
 
   .img-container{
-    grid-template-columns: repeat(2, 1fr);
+    width:120%;
+  }
+
+  .img-product{
+    margin: 0 15px 50px;
+    width:40%;
   }
 
   }
