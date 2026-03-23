@@ -67,14 +67,12 @@ ul {
   gap: 3rem;
   transition: all .3s;
 }
-
 .link {
   color: #ffff;
   font-size: 22px;
   position: relative;
   padding-bottom: 5px;
 }
-
 .boton-contac {
   background-color: #ffff;
   color: #0147a9;
@@ -113,11 +111,10 @@ ul {
 
 /* Medios responsivos */
 @media (min-width: 900px) {
-
+ 
   .labe_maquinado {
     display: none;
   }
-
   .ul_links {
     position: static;
     width: auto;
@@ -125,7 +122,6 @@ ul {
     flex-direction: row;
     gap: 2rem;
   }
-
   .link {
     font-size: 16px;
     transition: all .3s;
@@ -133,10 +129,37 @@ ul {
 }
 
 @media (max-width: 900px) {
-  .ul_links {
-    top: 190px;
+
+  .ul_links .li_links:first-child{
+    margin-top: 80px;
+  }
+
+.ul_links{
+  position: fixed;
+  top: 85px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 4.5rem;
+
+  background-color: #0147a9;
+
+  transition: height .3s ease;
+  }
+  .menu_maquinado:checked + .ul_links{
+  height:calc(100vh - 80px);
   }
 }
+
 
 /* ------------------------------------------------------------------------------------------------------- */
 .cta {
@@ -205,7 +228,6 @@ ul {
 .card1 {
   width: 300px;
   height: 320px;
-  overflow: hidden;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -234,10 +256,12 @@ ul {
 @media (max-width: 991px) {
 
   .target-1 {
-    margin: 80px 0 0 0;
+    margin: 20px 0 0 0;
   }
 
   .card1 {
+    background: none;
+    border: none;
     max-height: 120px;
     max-width: 10px;
   }
@@ -247,32 +271,39 @@ ul {
     display: none;
   }
 
+.card1 i{
+  font-size:40px;
+  color:#0147a9;
+  background:white;
+  padding:15px;
+  border-radius:50%;
+
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
 }
 
 
 @media (max-width: 900px) {
-  .header {
-    margin: 0;
-  }
+    .navbar{
+      border-bottom: 2px solid #0147a9;
+      padding: 0;
+    }
 
-  .navbar {
-    padding: 0;
-  }
+    .logo {
+      margin: 5px;
+      font-size: 22px;
+      font-weight: 600;
+    }
 
-  .logo {
-    margin: 5px;
-    font-size: 22px;
-    font-weight: 600;
-  }
+    .cta {
+      padding: 260px 30px 150px 30px;
+    }
 
-  .cta {
-    padding: 80px 30px 400px 30px;
+    .li_links {
+      padding: 10px 15px;
+    }
   }
-
-  .li_links {
-    padding: 10px 15px;
-  }
-}
 
 @media (main-width: 1600px) {
   .navbar {
@@ -302,7 +333,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 @keyframes fadeIn {
@@ -413,7 +444,11 @@ hr {
   color: #1976d2;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 900px) {
+
+  .personal{
+    display: none;
+  }
 
   .header-txt h1 {
     font-size: 90px;
@@ -554,6 +589,12 @@ hr {
   content: "✔";
 }
 
+@media(max-width: 900px) {
+
+  .servicios-imagen{
+    display: none;
+  }
+}
 
 footer {
   position: relative;
