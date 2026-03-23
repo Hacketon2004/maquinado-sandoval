@@ -219,7 +219,8 @@ ol, ul {
   }
 
   @media (max-width: 900px) {
-    .navbar{ 
+    .navbar{
+      border-bottom: 2px solid #0147a9;
       padding: 0;
     }
 
@@ -240,7 +241,6 @@ ol, ul {
 
   @media (main-width: 1600px) {
     .navbar{
-      border-bottom: 2px solid #0147a9;
       padding: 0;
     }
 
