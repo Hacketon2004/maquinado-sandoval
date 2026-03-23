@@ -97,7 +97,6 @@ ol, ul {
   transform-origin: bottom left;
 }
 
-/* Medios responsivos */
 @media (min-width: 900px) {
  
   .labe_maquinado {
@@ -117,9 +116,34 @@ ol, ul {
 }
 
 @media (max-width: 900px) {
-  .ul_links {
-    /* top: 190px; */
-    background-color: #0147a9;
+
+  .ul_links .li_links:first-child{
+    margin-top: 80px;
+  }
+
+.ul_links{
+  position: fixed;
+  top: 85px;
+  left: 0;
+
+  width: 100%;
+  height: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 4.5rem;
+
+  background-color: #0147a9;
+
+  transition: height .3s ease;
+  }
+  .menu_maquinado:checked + .ul_links{
+  height:calc(100vh - 80px);
   }
 }
 
@@ -215,7 +239,8 @@ ol, ul {
   }
 
   @media (main-width: 1600px) {
-    .navbar{ 
+    .navbar{
+      border-bottom: 2px solid #0147a9;
       padding: 0;
     }
 
